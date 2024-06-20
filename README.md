@@ -1,4 +1,5 @@
-# Skew Check
+# Greenplum 6.x Skew Check
+
 ### This is the ability to check skew for each schema when there are many objects (table, partition table, etc.) in a single database.
 ### last Existing functions take a long time to search for all objects and extract skew information, so they are extracted by schema as follows.
 
@@ -64,3 +65,7 @@ public.t1                       |          0.00|            0.00|            0.0
 public.tb_test1                 |          0.00|            0.00|            0.00|            0.00|                  100.00|               0.00|            3|
 
 6 row(s) fetched.
+
+### vseg_gap_min_max_percent : Large table size and difference in data file size between segments
+ex)
+all data file exists in only one segment = 100.00
